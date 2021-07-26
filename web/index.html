@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Moon Light</title>
+</head>
+<body>
+  <section>
+    <img src="img/bg.jpg" id="bg">
+    <img src="img/moon.png" id="moon">
+    <img src="img/mountain.png" id="mountain">
+    <img src="img/road.png" id="road">
+    <h2 id="title">Moon Light</h2>
+  </section>
+  <script>
+    let bg = document.getElementById("bg");
+    let moon = document.getElementById("moon");
+    let mountain = document.getElementById("mountain");
+    let road = document.getElementById("road");
+    let title = document.getElementById("title");
+    window.addEventListener('scroll', function(){
+      var value = window.scrollY;
+      bg.style.top = value * 0.5 + 'px';
+      moon.style.left = -value * 0.5 + 'px';
+      mountain.style.top = -value * 0.15 + 'px';
+      road.style.top = value * 0.15 + 'px';
+      title.style.top = value * 1 + 'px';
+    })
+  </script>
+  <p id="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolor sint commodi sed doloribus voluptatesexplicabo, suscipit soluta. Ad dolorem iusto excepturi eveniet soluta distinctio cupiditate possimus asperiores! Itaque culpacumque reiciendis!</p>
+  <div id="author" align="center">
+      <h3>by <a href="http://t.me/webulu" target="_blank">@webulu</a></h3>
+  </div>
+</body>
+</html>
